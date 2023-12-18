@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Language Learners Hub</title>
+  <style>
+    body {
+      margin: 20px;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #232323; /* Dark gray background */
+      color: #fff;
+    }
+
+    header {
+      background-color: #333; /* Dark Gray */
+      padding: 15px;
+      text-align: center;
+    }
+
+    #logo {
+      float: left;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    #profile {
+      float: right;
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: #1f1f1f; /* Dark Gray */
+      padding: 10px;
+      text-align: center;
+    }
+
+    #search-bar {
+      display: inline-block;
+      margin-bottom: 10px;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      width: 70%;
+      font-size: 16px;
+    }
+
+    #filter-section {
+      margin-bottom: 20px;
+    }
+
+    .filter-label {
+      font-size: 16px;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+
+    .filter-checkbox {
+      margin-right: 15px;
+    }
+
+    #groups {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .group {
+      border: 2px solid #444; /* Dark Gray */
+      padding: 15px;
+      text-align: center;
+      margin: 10px;
+      background-color: #333; /* Dark Gray */
+      border-radius: 8px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .group:hover {
+      transform: scale(1.05);
+    }
+
+    .group button {
+      background-color: #43a047; /* Dark Green */
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .group button:hover {
+      background-color: #2E7D32; /* Light Green */
+    }
+
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #333; /* Dark Gray */
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+    }
+
+    #bottom-buttons {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    button {
+      background-color: #1f1f1f; /* Dark Gray */
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #333; /* Slightly lighter Dark Gray */
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div id="logo" style="color: #fff;">LanguageHub</div>
+    <div id="profile">Your Profile</div>
+  </header>
+
+  <nav>
+    <input type="text" id="search-bar" placeholder="Search for language partners...">
+    <div id="filter-section">
+      <span class="filter-label">Languages:</span>
+      <input type="checkbox" class="filter-checkbox" id="spanish"> <label for="spanish">Spanish</label>
+      <input type="checkbox" class="filter-checkbox" id="french"> <label for="french">French</label>
+      <input type="checkbox" class="filter-checkbox" id="german"> <label for="german">German</label>
+      <input type="checkbox" class="filter-checkbox" id="italian"> <label for="italian">Italian</label>
+      <input type="checkbox" class="filter-checkbox" id="chinese"> <label for="chinese">Chinese</label>
+      <input type="checkbox" class="filter-checkbox" id="japanese"> <label for="japanese">Japanese</label>
+      <input type="checkbox" class="filter-checkbox" id="russian"> <label for="russian">Russian</label>
+      <input type="checkbox" class="filter-checkbox" id="korean"> <label for="korean">Korean</label>
+      <input type="checkbox" class="filter-checkbox" id="portuguese"> <label for="portuguese">Portuguese</label>
+      <input type="checkbox" class="filter-checkbox" id="dutch"> <label for="dutch">Dutch</label>
+      <!-- Add more languages as needed -->
+
+      <span class="filter-label" style="margin-left: 20px;">Topics:</span>
+      <input type="checkbox" class="filter-checkbox" id="travel"> <label for="travel">Travel</label>
+      <input type="checkbox" class="filter-checkbox" id="culture"> <label for="culture">Culture</label>
+      <input type="checkbox" class="filter-checkbox" id="tech"> <label for="tech">Tech</label>
+      <input type="checkbox" class="filter-checkbox" id="food"> <label for="food">Food</label>
+      <!-- Add more topics as needed -->
+    </div>
+    <div id="groups">
+      <div class="group">
+        <span style="font-size: 24px;">🇪🇸</span><br>
+        Spanish Learners<br>
+        Connect with others<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 24px;">🇫🇷</span><br>
+        French Enthusiasts<br>
+        Language exchange<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 24px;">🇩🇪</span><br>
+        German Speakers<br>
+        Practice together<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 24px;">🇮🇹</span><br>
+        Italian Language Exchange<br>
+        Share your passion<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 24px;">🇨🇳</span><br>
+        Chinese Conversation<br>
+        Improve your skills<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 24px;">🇯🇵</span><br>
+        Japanese Language Exchange<br>
+        Learn and practice Japanese<br>
+        <button>Join</button>
+      </div>
+      
+      <div class="group">
+        <span style="font-size: 24px;">🇷🇺</span><br>
+        Russian Speakers Community<br>
+        Connect with Russian learners<br>
+        <button>Join</button>
+      </div>
+      
+      <div class="group">
+        <span style="font-size: 24px;">🇰🇷</span><br>
+        Korean Language Enthusiasts<br>
+        Share your Korean journey<br>
+        <button>Join</button>
+      </div>
+      
+      <div class="group">
+        <span style="font-size: 24px;">🇵🇹</span><br>
+        Portuguese Learning Club<br>
+        Improve your Portuguese skills<br>
+        <button>Join</button>
+      </div>
+      <!-- ... (previous code) ... -->
+
+      <div class="group">
+        <span style="font-size: 24px;">🇰🇷</span><br>
+        Korean Language Exchange<br>
+        Language and culture<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 24px;">🇷🇺</span><br>
+        Russian Speakers Community<br>
+        Practice and learn<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 24px;">🇵🇹</span><br>
+        Portuguese Learning Group<br>
+        Share your knowledge<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 24px;">🇳🇱</span><br>
+        Dutch Language Enthusiasts<br>
+        Conversations and more<br>
+        <button>Join</button>
+      </div>
+      <div class="group">
+        <span style="font-size: 
+
+      
+      <div class="group">
+        <span style="font-size: 24px;">🇳🇱</span><br>
+        Dutch Language Exchange<br>
+        Connect with Dutch speakers<br>
+        <button>Join</button>
+      </div>
+      <footer>
+        <div id="bottom-buttons">
+          <button>Home</button>
+          <button>Search</button>
+          <button>Create</button>
+          <button>Notifications</button>
+          <button>Profile</button>
+          <button>Settings</button>
+          <button>Help</button>
+        </div>
+      </footer> make it very user friendly 
+
