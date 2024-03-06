@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topic Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .languages-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .language {
+            margin-right: 10px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .language:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .btn-close {
+            background-color: #dc3545;
+            margin-left: 10px;
+        }
+        .btn:hover, .btn-close:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Register for a Topic</h2>
+        <form id="topicForm" action="#" method="post">
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic" required>
+            
+            <label for="maxParticipants">Maximum Participants:</label>
+            <input type="number" id="maxParticipants" name="maxParticipants" min="1" required>
+            
+            <label for="languages">Languages:</label>
+            <div class="languages-container">
+                <!-- Here you can generate language options dynamically -->
+                <div class="language" onclick="toggleLanguage('English')">English</div>
+                <div class="language" onclick="toggleLanguage('Spanish')">Spanish</div>
+                <div class="language" onclick="toggleLanguage('French')">French</div>
+                <!-- Add more languages as needed -->
+            </div>
+            
+            <label for="languageLevel">Language Level:</label>
+            <select id="languageLevel" name="languageLevel" required>
+                <option value="">Select Level</option>
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Advanced">Advanced</option>
+            </select>
+            
+            <div class="footer">
+                <button type="submit" class="btn">Register</button>
+                <button type="button" class="btn btn-close" onclick="closeForm()">Close</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleLanguage(language) {
+            // Your logic to toggle language selection
+            console.log("Selected language:", language);
+        }
+
+        function closeForm() {
+            // Your logic to close the form
+            console.log("Form closed");
+        }
+    </script>
+</body>
+</html>
