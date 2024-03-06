@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virtual Room</title>
+<style>
+  /* Basic styling */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .room {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+  }
+  .room-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .host-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .profile-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+  .profile-details {
+    flex-grow: 1;
+  }
+  .profile-details h3 {
+    margin: 0;
+    font-size: 20px;
+  }
+  .participants {
+    margin-bottom: 20px;
+  }
+  .participants p {
+    margin: 5px 0;
+  }
+  .join-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="room">
+    <h2 class="room-title">Virtual Room - Language Topic</h2>
+    <!-- Host profile -->
+    <div class="host-profile">
+      <img src="https://via.placeholder.com/150" alt="Host Profile" class="profile-img">
+      <div class="profile-details">
+        <h3>Host Name</h3>
+        <p>Followers: 500</p>
+      </div>
+    </div>
+    <!-- Participants info -->
+    <div class="participants">
+      <p>Participants: 5</p>
+    </div>
+    <!-- Join button -->
+    <button class="join-button">Join Room</button>
+  </div>
+</div>
+</body>
+</html>
