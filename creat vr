@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discussion Forum</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: #343a40;
+            padding: 10px 0;
+            text-align: center;
+            color: #ffffff;
+        }
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'language');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Discussion Forum</h2>
+        <div class="form-group">
+            <label for="topic">Topic:</label>
+            <input type="text" class="form-control" id="topic" placeholder="Enter topic">
+        </div>
+        <div class="form-group">
+            <label for="maxParticipants">Maximum Participants:</label>
+            <select class="form-control" id="maxParticipants">
+                <option>Unlimited</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <!-- Add more options as needed -->
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="language">Language:</label>
+            <div id="language"></div>
+        </div>
+        <div class="form-group">
+            <label for="languageLevel">Language Level:</label>
+            <select class="form-control" id="languageLevel">
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+            </select>
+        </div>
+        <button type="button" class="btn btn-primary btn-block">Create Discussion</button>
+    </div>
+    <footer class="footer">
+        <button type="button" class="btn btn-secondary">Close</button>
+    </footer>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
