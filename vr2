@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Language VR Room</title>
+<style>
+  /* Some basic styling */
+  .container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+  }
+  .room {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  .host-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .host-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .host-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .host-followers {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+  }
+  .participants {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .participant {
+    margin: 10px;
+    text-align: center;
+  }
+  .participant-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+  }
+  .participant-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  .participant-count {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 15px;
+  }
+  .join-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .join-button:hover {
+    background-color: #45a049;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <!-- VR Room -->
+  <div class="room">
+    <div class="host-profile">
+      <img src="https://via.placeholder.com/150" alt="Host" class="host-img" id="hostImg">
+      <p class="host-name" id="hostName">Host Name</p>
+      <p class="host-followers" id="hostFollowers">500 Followers</p>
+    </div>
+    <div class="participants" id="participantsContainer"></div>
+    <p class="participant-count" id="participantCount">5 Participants</p>
+    <button class="join-button" id="joinButton">Join Room</button>
+  </div>
+</div>
+
+<script>
+  // Sample host profile
+  const hostProfile = {
+    name: "Host Name",
+    followers: 500,
+    pictureUrl: "https://via.placeholder.com/150" // Placeholder image URL
+  };
+
+  // Sample other participants profiles
+  const otherParticipants = [
+    { name: "Participant 1", pictureUrl: "https://via.placeholder.com/150" }, // Placeholder image URL
+    { name: "Participant 2", pictureUrl: "https://via.placeholder.com/150" },
+    { name: "Participant 3", pictureUrl: "https://via.placeholder.com/150" },
+    { name: "Participant 4", pictureUrl: "https://via.placeholder.com/150" },
+    { name: "Participant 5", pictureUrl: "https://via.placeholder.com/150" }
+  ];
+
+  // Display host profile
+  const hostImg = document.getElementById('hostImg');
+  const hostName = document.getElementById('hostName');
+  const hostFollowers = document.getElementById('hostFollowers');
+  
+  hostImg.src = hostProfile.pictureUrl;
+  hostImg.alt = hostProfile.name;
+  hostName.textContent = hostProfile.name;
+  hostFollowers.textContent = `${hostProfile.followers} Followers`;
+
+  // Display other participants profiles
+  const participantsContainer = document.getElementById('participantsContainer');
+  otherParticipants.forEach(participant => {
+    const participantDiv = document.createElement('div');
+    participantDiv.classList.add('participant');
+    const participantImg = document.createElement('img');
+    participantImg.src = participant.pictureUrl;
+    participantImg.alt = participant.name;
+    participantImg.classList.add('participant-img');
+    const participantName = document.createElement('p');
+    participantName.textContent = participant.name;
+    participantName.classList.add('participant-name');
+    participantDiv.appendChild(participantImg);
+    participantDiv.appendChild(participantName);
+    participantsContainer.appendChild(participantDiv);
+  });
+
+  // Update participant count
+  document.getElementById('participantCount').textContent = otherParticipants.length + 1;
+
+  // Function to simulate joining the room
+  document.getElementById('joinButton').addEventListener('click', function() {
+    alert('Joining the room...');
+    // You can add more functionality here, like redirecting to a chat room, etc.
+  });
+</script>
+</body>
+</html>
